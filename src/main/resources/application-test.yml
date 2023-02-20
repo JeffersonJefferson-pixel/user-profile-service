@@ -1,0 +1,42 @@
+.env:
+  directory: ./
+  filename: .env-test
+  ignoreIfMalformed: true
+  ignoreIfMissing: true
+  systemProperties: true
+  prefix: ""
+
+kafka:
+  topic:
+    application-review: user-profile-application-reviewed
+    notification: notification
+    csr:
+      request: csr-request
+      reply: csr-reply
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:demo;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+
+  cloud:
+    config:
+      enabled: false
+
+
+  kafka:
+    properties:
+      schema.registry.url: mock://scope1
+    bootstrap-servers: localhost:9092

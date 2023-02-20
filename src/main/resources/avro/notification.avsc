@@ -1,0 +1,11 @@
+{
+  "namespace": "com.camdigikey.userprofileservice.schema",
+  "type": "record",
+  "name": "NotificationMsg",
+  "fields": [
+    {
+      "name": "message",
+      "type": "string"
+    }
+  ]
+}

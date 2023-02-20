@@ -1,0 +1,19 @@
+{
+  "namespace": "com.camdigikey.userprofileservice.schema",
+  "type": "record",
+  "name": "CsrRequestMsg",
+  "fields": [
+    {
+      "name": "appId",
+      "type": "string"
+    },
+    {
+      "name": "camDigiKeyId",
+      "type": "string"
+    },
+    {
+      "name": "csr",
+      "type": "string"
+    }
+  ]
+}

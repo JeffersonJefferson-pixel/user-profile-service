@@ -1,0 +1,27 @@
+{
+  "namespace": "com.camdigikey.userprofileservice.schema",
+  "type": "record",
+  "name": "ApplicationReviewMsg",
+  "fields": [
+    {
+      "name": "appId",
+      "type": "string"
+    },
+    {
+      "name": "status",
+      "type": "int"
+    },
+    {
+      "name": "reviewMessage",
+      "type": "string"
+    },
+    {
+      "name": "incorrectFields",
+      "type": {
+        "type": "array",
+        "items" : "string",
+        "default": []
+      }
+    }
+  ]
+}
